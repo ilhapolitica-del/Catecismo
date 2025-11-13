@@ -35,7 +35,7 @@ const SearchView: React.FC<{ onOpenAbout: () => void }> = ({ onOpenAbout }) => {
   const debounceTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Initialize Gemini
-  const ai = useMemo(() => new GoogleGenAI({ apiKey: process.env.API_KEY }), []);
+  const ai = useMemo(() => new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY }), []);
 
   // Handle initial load from URL param if exists
   useEffect(() => {
