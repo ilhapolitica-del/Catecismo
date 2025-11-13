@@ -75,4 +75,3 @@ export const CatechismCard: React.FC<CatechismCardProps> = ({ paragraph, searchQ
       </div>
     </div>
   );
-};
