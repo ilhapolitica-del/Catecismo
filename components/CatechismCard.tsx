@@ -18,6 +18,7 @@ export const CatechismCard: React.FC<CatechismCardProps> = ({ paragraph, searchQ
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+   const handleLink = () => {
     // Create a hash link
     const url = `${window.location.origin}${window.location.pathname}#/paragraph/${paragraph.id}`;
     navigator.clipboard.writeText(url);
