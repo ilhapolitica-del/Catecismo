@@ -1,0 +1,5 @@
+{
+  "name": "Catecismo Search",
+  "description": "A fast, minimalist, offline-capable search engine for the Catechism of the Catholic Church with live filtering, dark mode, and deep linking.",
+  "requestFramePermissions": []
+}
