@@ -18,7 +18,7 @@ export const CatechismCard: React.FC<CatechismCardProps> = ({ paragraph, searchQ
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
-
+rounded-lg shadow-sm border p-6 transition-all hover:shadow-md
   const handleLink = () => {
     // Create a hash link
     const url = `${window.location.origin}${window.location.pathname}#/paragraph/${paragraph.id}`;
@@ -30,7 +30,7 @@ export const CatechismCard: React.FC<CatechismCardProps> = ({ paragraph, searchQ
   return (
     <div 
       id={`p-${paragraph.id}`}
-      className={`rounded-lg shadow-sm border p-6 transition-all hover:shadow-md ${
+      className={`rounded-lg shadow-sm border p-6 my-4 transition-all hover:shadow-md ${
         paragraph.source === 'ai' 
           ? 'bg-white dark:bg-slate-800 border-amber-200 dark:border-amber-900/50' 
           : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700'
