@@ -18,8 +18,6 @@ export const CatechismCard: React.FC<CatechismCardProps> = ({ paragraph, searchQ
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
-rounded-lg shadow-sm border p-6 transition-all hover:shadow-md
-  const handleLink = () => {
     // Create a hash link
     const url = `${window.location.origin}${window.location.pathname}#/paragraph/${paragraph.id}`;
     navigator.clipboard.writeText(url);
