@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo, useEffect } from 'react';
 import { HashRouter, Routes, Route, useParams, useNavigate, useLocation } from 'react-router-dom';
 import { Search, Info, Book, X, Sparkles, Loader2, ArrowRight } from 'lucide-react';
@@ -63,6 +62,7 @@ const SearchView: React.FC<{ onOpenAbout: () => void }> = ({ onOpenAbout }) => {
         1. Retorne o texto EXATO e o número do parágrafo.
         2. Se a busca for um número (ex: "123"), retorne exatamente esse parágrafo.
         3. Categorize a seção (ex: "Profissão de Fé", "Sacramentos", "A Vida em Cristo", "Oração Cristã").
+        4. Identifique referências bíblicas diretas ou de rodapé associadas a este parágrafo (Use o cânon católico, ex: Jerusalém/Ave Maria).
         
         Retorne APENAS um JSON array.`,
         config: {
@@ -75,6 +75,11 @@ const SearchView: React.FC<{ onOpenAbout: () => void }> = ({ onOpenAbout }) => {
                 id: { type: Type.INTEGER },
                 text: { type: Type.STRING },
                 section: { type: Type.STRING },
+                bibleReferences: {
+                  type: Type.ARRAY,
+                  items: { type: Type.STRING },
+                  description: "Lista de citações bíblicas (Livro Cap:Ver) relacionadas, canônicas católicas."
+                }
               },
               required: ["id", "text", "section"],
             },

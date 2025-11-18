@@ -4,6 +4,7 @@ export interface CatechismParagraph {
   text: string;
   section?: string; // e.g., "Profissão de Fé"
   source?: 'local' | 'ai';
+  bibleReferences?: string[]; // Bible verses (Catholic Canon)
 }
 
 export enum SectionType {
